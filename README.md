@@ -36,7 +36,7 @@ movie-recommender-system/
 ## Prerequisites
 
 - Python 3.x
-- Required Python packages: `pandas`, `scikit-learn`
+- Required Python packages: `numpy`
 
 ### Installation
 
@@ -52,8 +52,8 @@ movie-recommender-system/
 
 3. **Run recommender system**:
   Either run using Python IDE or if using the terminal:
- ```bash
- python source_code.py
+```bash
+python source_code.py
 
 The script will:
 - Load the training data.
