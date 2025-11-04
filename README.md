@@ -31,6 +31,7 @@ movie-recommender-system/
 ├── source_code.py
 └── README.md
 
+```
 
 ## Prerequisites
 
