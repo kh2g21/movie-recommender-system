@@ -23,12 +23,16 @@ The program **learns these patterns** from the training data to make accurate pr
 
 ## Repo Structure
 
-train_100k_withratings.csv - Training data: user, movie, rating, timestamp
-test_100k_withoutratings.csv - Test data: user, movie, timestamp
-source_code.py - Code for the recommender system; full pipeline for training and predicting ratings
-README.md (this file)
+```text
+movie-recommender-system/
+│
+├── train_100k_withratings.csv
+├── test_100k_withoutratings.csv
+├── source_code.py
+└── README.md
 
-### Prerequisites
+
+## Prerequisites
 
 - Python 3.x
 - Required Python packages: `pandas`, `scikit-learn`
@@ -48,5 +52,10 @@ README.md (this file)
 3. **Run recommender system**:
   Either run using Python IDE or if using the terminal:
  ```bash
-python source_code.py
+   python source_code.py
 
+The script will:
+- Load the training data.
+- Train the matrix factorization model with user and item biases.
+- Load the test data.
+- Generate predictions for each user-item pair in the test set (into a file called results.csv).
