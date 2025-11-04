@@ -57,7 +57,7 @@ movie-recommender-system/
   ```
 
 The script will:
-- Load the training data (``train_100k_withratings.csv`).
+- Load the training data (`train_100k_withratings.csv`).
 - Train the matrix factorization model with user and item biases.
 - Load the test data (`test_100k_withoutratings.csv`).
 - Generate predictions for each user-item pair in the test set (into a file called `results.csv`).
