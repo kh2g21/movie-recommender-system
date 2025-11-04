@@ -81,9 +81,9 @@ The model was trained for **10 epochs** on the training dataset. The **Mean Abso
 | 9     | 0.6718 |
 | 10    | 0.6571 |
 
-### Interpretation
+### Significance of these results
 
-- The **MAE decreases steadily**, which indicates that the model is learning effectively.  
+- The **MAE is decreasing steadily**, which indicates that the model is learning effectively.  
 - By **the final epoch**, the average prediction error is around **0.657**, meaning that on average, predicted ratings are within 0.66 points of the true ratings.  
 - This shows that the **matrix factorization model with user and item biases is capturing patterns well** in user preferences and movie ratings.  
 - Further training (more epochs) or tuning hyperparameters like **latent factors, learning rate, or regularization** could potentially improve accuracy even more.
