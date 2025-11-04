@@ -194,7 +194,7 @@ def run(train_file, test_file):
 
 if __name__ == '__main__':
     # File paths for training and test datasets
-    TRAIN_FILE = 'train_20M_withratings.csv'
-    TEST_FILE = 'test_20M_withoutratings.csv'
+    TRAIN_FILE = 'train_100k_withratings.csv'
+    TEST_FILE = 'test_100k_withoutratings.csv'
     run(TRAIN_FILE, TEST_FILE)
 
