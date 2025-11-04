@@ -54,6 +54,7 @@ movie-recommender-system/
   Either run using Python IDE or if using the terminal:
   ```bash
   python source_code.py
+  ```
 
 The script will:
 - Load the training data.
