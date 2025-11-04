@@ -53,7 +53,7 @@ movie-recommender-system/
 3. **Run recommender system**:
   Either run using Python IDE or if using the terminal:
  ```bash
-   python source_code.py
+ python source_code.py
 
 The script will:
 - Load the training data.
