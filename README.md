@@ -2,22 +2,33 @@
 
 ## Overview
 
-This repository contains two Python scripts for recommending movies using different methodologies:
+This is a **collaborative filtering movie recommender system** using **matrix factorization with bias terms**. The system predicts user ratings for movies based on historical user-item interactions. It is designed to provide personalized movie recommendations for users.
 
-1. **User-Based Collaborative Filtering**: Recommends movies to users by analyzing the preferences of similar users.
-2. **Content-Based Filtering**: Recommends movies similar to a given movie based on genre similarities.
+## source_code.py
 
-## Features
+- Predicts movie ratings for users based on past ratings.
+- Learns patterns for both users and movies (some users rate higher/lower, some movies are generally more liked).
+- Handles datasets with 100k users and movies efficiently.
+- Saves predictions in a CSV file for easy analysis.
 
-- **User-Based Collaborative Filtering**:
-  - Provides movie recommendations based on user preferences.
-  - Identifies users with similar tastes and suggests movies they liked.
+The system predicts a rating for a movie using a combination of:
 
-- **Content-Based Filtering**:
-  - Recommends movies similar to a given movie based on genre information.
-  - Uses TF-IDF vectorization to compute similarity between movies.
+- The **average rating** across all users  
+- The **user's personal bias** (some users give higher/lower ratings)  
+- The **movie's popularity bias** (some movies are generally liked more)  
+- **Hidden factors** that represent user preferences and movie features  
 
-## Getting Started
+The program **learns these patterns** from the training data to make accurate predictions for the test data.
+
+
+## Repo Structure
+
+movie-recommender-system/
+│
+├── train_100k_withratings.csv # Training data: user, movie, rating, timestamp
+├── test_100k_withoutratings.csv # Test data: user, movie, timestamp
+├── source_code.py # Code for the recommender system; full pipeline for training and predicting ratings
+└── README.md # This file
 
 ### Prerequisites
 
@@ -34,43 +45,10 @@ This repository contains two Python scripts for recommending movies using differ
 2. **Install Dependencies**:
    Install required packages using pip:
    ```bash
-   pip install pandas scikit-learn
+   pip install numpy 
 
-3. **Download Data**:
-   Download the MovieLens 100k dataset from MovieLens and place the data files (u.data and u.item) in the ml-100k directory.
+3. **Run recommender system**:
+  Either run using Python IDE or if using the terminal:
+ ```bash
+python source_code.py
 
-## Usage
-
-- **User-Based Recommendations**:
-  - **Description**: Get movie recommendations for a user based on the preferences of similar users.
-  - **Command**:
-    ```bash
-    python user_based_recommender.py --user_id 5 --num_recommendations 5
-    ```
-  - **Parameters**:
-    - `--user_id`: The ID of the user for whom recommendations are to be generated.
-    - `--num_recommendations`: The number of movie recommendations to display.
-  - **Example Output**:
-    ```plaintext
-    Movies recommended for user 5:
-    Movie 1
-    Movie 2
-    Movie 3
-    ```
-
-- **Content-Based Recommendations**:
-  - **Description**: Get movie recommendations similar to a given movie based on genre similarity.
-  - **Command**:
-    ```bash
-    python content_based_recommender.py --movie_title "Star Wars (1977)" --num_recommendations 5
-    ```
-  - **Parameters**:
-    - `--movie_title`: The title of the movie for which similar recommendations are to be made.
-    - `--num_recommendations`: The number of similar movies to display.
-  - **Example Output**:
-    ```plaintext
-    Movies similar to 'Star Wars (1977)':
-    Movie A
-    Movie B
-    Movie C
-    ```
