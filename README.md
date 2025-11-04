@@ -23,12 +23,10 @@ The program **learns these patterns** from the training data to make accurate pr
 
 ## Repo Structure
 
-movie-recommender-system/
-│
-├── train_100k_withratings.csv # Training data: user, movie, rating, timestamp
-├── test_100k_withoutratings.csv # Test data: user, movie, timestamp
-├── source_code.py # Code for the recommender system; full pipeline for training and predicting ratings
-└── README.md # This file
+train_100k_withratings.csv - Training data: user, movie, rating, timestamp
+test_100k_withoutratings.csv - Test data: user, movie, timestamp
+source_code.py - Code for the recommender system; full pipeline for training and predicting ratings
+README.md (this file)
 
 ### Prerequisites
 
@@ -39,7 +37,7 @@ movie-recommender-system/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/movie-recommender-system.git
+   git clone https://github.com/kh2g21/movie-recommender-system.git
    cd movie-recommender-system
 
 2. **Install Dependencies**:
